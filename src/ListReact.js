@@ -1,7 +1,10 @@
 import React from "react";
 
 function ListReact() {
-    const fruits = ["Apple", "Orange", "Cherry", "Banana", "Watermelon", "Grapes", "Papaya"]
+    const fruits = ["Apple", "Orange", "Cherry", "Banana", "Watermelon", "Grapes", "Papaya"];
+    const handleClick = (fruits)=> {
+        document.getElementById('Fruits').innerHTML = `You clicked on ${fruits}`
+    };
     const users = [
         { id: 1, name: 'Geek', age: 35 },
         { id: 2, name: 'Alphonse', age: 28 },
@@ -11,9 +14,13 @@ function ListReact() {
         <div>
             <h1>Fruits</h1>
             <ul>
-                {fruits.map((f, index) => (
-                    <li key={index}>{f}</li>
+                <p id="Fruits"></p>
+                {fruits.map((fruits, index) =>(
+                    <button key={index} onClick={() => handleClick(fruits)}>
+                        {fruits}
+                    </button>
                 ))}
+
             </ul>
             <br /><br />
             <h1>Developers</h1>
