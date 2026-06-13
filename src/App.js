@@ -1,26 +1,17 @@
 import React from "react";
-import bio from "./Bio";
 
-const Welcome = (props) => {
-  return <div>{props.children}</div>
-}
-const element = React.createElement(
-  "button",
-  {
-    className: "btn",
-    onClick: () => alert("Clicked"),
-  },
-  "Click Me"
-);
 function App() {
   return(
-    <Welcome>
-      <bio />
-      {element}
-    </Welcome>
-    
-  );
-
+    <div>
+      <h1>
+        My name is Thivviyan <br />
+      </h1>
+      
+      <p>
+        Welcome to my page
+      </p>
+    </div>
+  )
 }
 
 export default App;
